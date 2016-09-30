@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .header
+      h1.page-title Um portfólio
+
+    ul.nav
+      li: a(href='/') Home
+      li: a(href='/contato') Contato
+
+    .main-content
+      block content
+
+    .footer
+      p Copyright © 2016 Ivar Castro.

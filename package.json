@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "description": "A simple portfolio website in node js",
+  "private": true,
+  "scripts": {
+    "build-css": "stylus stylesheets/style.styl -o public/stylesheets",
+    "watch-css": "stylus stylesheets/style.styl -o public/stylesheets -w",
+    "clean": "rm -rf public/stylesheets && mkdir -p public/stylesheets",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,pug",
+    "start": "node ./bin/www"
+  },
+  "author": "Ivar Castro",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "morgan": "~1.7.0",
+    "nodemon": "^1.9.1",
+    "pug": "~2.0.0-beta6",
+    "serve-favicon": "~2.3.0",
+    "stylus": "^0.53.0"
+  }
+}
